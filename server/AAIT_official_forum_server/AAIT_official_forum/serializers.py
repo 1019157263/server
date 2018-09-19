@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from AAIT_official_forum.models import Administrator,Article,ArticleBoard,ArticleComment,Goods
+from AAIT_official_forum.models import Administrator,Article,ArticleBoard,ArticleComment,Goods,PoromodoClock
 
 class AdministratorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,3 +27,8 @@ class GoodsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Goods
         fields=("goods_id","price","stock","goods_image","goods_info","is_online")
+
+class PoromodoClockSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PoromodoClock
+        fields = ('poromodo_clock_id', 'user_id','clock_count','invalid_poromodo_clock')

@@ -5,8 +5,8 @@ from rest_framework.decorators import api_view
 from django.views.generic import View
 
 
-from AAIT_official_forum.models import Administrator,Article,ArticleBoard,ArticleComment,Goods
-from AAIT_official_forum.serializers import AdministratorSerializer,ArticleSerializer,ArticleBoardSerializer,ArticleCommentSerializer,GoodsSerializer
+from AAIT_official_forum.models import Administrator,Article,ArticleBoard,ArticleComment,Goods,PoromodoClock
+from AAIT_official_forum.serializers import AdministratorSerializer, PoromodoClockSerializer,ArticleSerializer,ArticleBoardSerializer,ArticleCommentSerializer,GoodsSerializer
 
 # Create your views here.
 
@@ -29,9 +29,17 @@ class ArticleCommentViewSet(viewsets.ModelViewSet):
     queryset = ArticleComment.objects.all()
     serializer_class = ArticleCommentSerializer
 
-class GoodsViewSet(viewsets.ModelViewSet):
+class GoodsViewSet(viewsets.ModelViewSet,generics.RetrieveUpdateAPIView,generics.RetrieveDestroyAPIView):
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
+#zhao
+
+
+class PoromodoClockViewSet(viewsets.ModelViewSet,generics.RetrieveUpdateAPIView,generics.RetrieveDestroyAPIView):
+    queryset = PoromodoClock.objects.all()
+    serializer_class = PoromodoClockSerializer
+#zhao
+
 
 def index(request):
     if(request.method=='GET'):

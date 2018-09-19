@@ -296,7 +296,8 @@ class User(models.Model):
     user_description = models.CharField(max_length=200, blank=True, null=True)
     last_post_id = models.IntegerField(blank=True, null=True)
     last_article_id = models.IntegerField(blank=True, null=True)
-
+    def __str__(self):
+        return self.username  
     class Meta:
         managed = False
         db_table = 'user'
