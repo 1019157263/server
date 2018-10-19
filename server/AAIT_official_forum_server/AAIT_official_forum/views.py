@@ -10,9 +10,6 @@ from AAIT_official_forum.serializers import AdministratorSerializer, PoromodoClo
 
 # Create your views here.
 
-class AdministratorViewSet(viewsets.ModelViewSet,generics.RetrieveUpdateAPIView,generics.RetrieveDestroyAPIView):
-    queryset = Administrator.objects.all()
-    serializer_class = AdministratorSerializer
 
 
 
@@ -28,6 +25,12 @@ class ArticleBoardViewSet(viewsets.ModelViewSet):
 class ArticleCommentViewSet(viewsets.ModelViewSet):
     queryset = ArticleComment.objects.all()
     serializer_class = ArticleCommentSerializer
+
+
+class AdministratorViewSet(viewsets.ModelViewSet,generics.RetrieveUpdateAPIView,generics.RetrieveDestroyAPIView):
+    queryset = Administrator.objects.all()
+    serializer_class = AdministratorSerializer
+
 
 class GoodsViewSet(viewsets.ModelViewSet,generics.RetrieveUpdateAPIView,generics.RetrieveDestroyAPIView):
     queryset = Goods.objects.all()

@@ -41,9 +41,8 @@ urlpatterns = [
     url(r'administrator_edit/id/(?P<pk>[0-9]+)$',administrator_detail),
     url(r'article_detail/id/(?P<pk>[0-9]+)$', article_detail),
     path('article/', article_list),
-    path('city/', include('city.urls')),
-    url(r'goods', goods_list),
-    url(r'goods/id/(?P<pk>[0-9]+)$', goods_detail),
-    url(r'poromodoclock', poromodoclock_list),
-    url(r'poromodoclock/id/(?P<pk>[0-9]+)$', poromodoclock_detail),
+    url('goods/', goods_list),
+    url(r'goods_detail/id/(?P<pk>[0-9]+)$', goods_detail),
+    url('poromodoclock/', poromodoclock_list),
+    url(r'poromodoclock_detail/id/(?P<pk>[0-9]+)$', poromodoclock_detail),
 ]

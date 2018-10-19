@@ -1,11 +1,6 @@
 from rest_framework import serializers
 from AAIT_official_forum.models import Administrator,Article,ArticleBoard,ArticleComment,Goods,PoromodoClock
 
-class AdministratorSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Administrator
-        fields=("administrator_id","user_id")
-
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,6 +17,13 @@ class ArticleCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = ArticleComment
         fields=("article_comment_id","user_id","article_id","content","time")
+
+
+class AdministratorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Administrator
+        fields=("administrator_id","user_id")
+
 
 class GoodsSerializer(serializers.ModelSerializer):
     class Meta:
