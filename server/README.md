@@ -39,23 +39,20 @@ DATABASES = {
 
 ### 3 goods的api
 
-get访问127.0.0.1:8000/goods/
-获取全部数据
-get访问127.0.0.1:8000/goods_detail/id/id号
-访问goods详情
-post提交对应字段增加一行数据
-put修改
+- get访问127.0.0.1:8000/goods/
+- 获取全部数据
+- get访问127.0.0.1:8000/goods_detail/id/id号
+- 访问goods详情
+- post提交对应字段增加一行数据
+- put修改
 
 ### 3 Poromodo Clock的api
-
-get访问127.0.0.1:8000/poromodoclock/
-获取全部数据
-get访问127.0.0.1:8000/poromodoclock_detail/id/id号
-访问poromodoclock的详情
-
-post提交对应字段增加一行数据
-
-put修改
+- get访问127.0.0.1:8000/poromodoclock/
+- 获取全部数据
+- get访问127.0.0.1:8000/poromodoclock_detail/id/id号
+- 访问poromodoclock的详情
+- post提交对应字段增加一行数据
+- put修改
 
 
 
